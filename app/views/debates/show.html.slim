@@ -1,0 +1,13 @@
+section#main
+  article
+    /header
+      h1 = @debate.title
+    #authors
+      .first
+        h1 Walter Sinnot-Armstrong
+      .second
+        h1 William Lane Craig
+    h2 = @debate.subtitle
+    p = @debate.content 
+javascript:
+  $('body').addClass('start')
