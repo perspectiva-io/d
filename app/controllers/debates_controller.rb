@@ -4,7 +4,11 @@ class DebatesController < ApplicationController
   class DebateNotFound < NotFound; end
 
   rescue_from NotFound, with: :not_found
- 
+
+  def new
+    @debate = Debate.new
+  end
+
   def not_found
     raise ActionController::RoutingError.new('Not Found')
   end
