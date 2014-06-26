@@ -3,12 +3,14 @@ class Debate < Ohm::Model
 
   attribute :title
   attribute :subtitle
-  attribute :content
 
-  def save 
-    self.id = title.parameterize
-    super
-  end
+  attribute :pro_author_name
+  attribute :pro_author_image
+  attribute :pro_author_content
 
-  alias :to_param :id
+  attribute :con_author_name
+  attribute :con_author_image
+  attribute :con_author_content
+
+  alias :to_s :id
 end
