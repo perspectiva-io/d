@@ -1,0 +1,23 @@
+article
+  header
+    h1.no-toolbar.editable[data-placeholder="Big question here"] 
+    h2.no-toolbar.editable[data-placeholder="A qnice punchline here"]
+  section#authors
+    .first-author
+      h3 Yes
+      = image_tag ""
+      h4.no-toolbar.editable[data-placeholder="First author name"]
+    .second-author
+      h3 No
+      = image_tag ""
+      h4.no-toolbar.editable[data-placeholder="Second author name"]
+  section#debate
+    p.editable.with-toolbar[data-placeholder="The great content goes here"]
+
+javascript:
+  new MediumEditor('.editable.no-toolbar', {disableToolbar: true});
+  new MediumEditor('.editable.with-toolbar');
+
+  $('.editable').on('input', function() {
+    console.log(this) 
+  });

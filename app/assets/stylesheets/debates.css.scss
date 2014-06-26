@@ -1,73 +1,80 @@
 @import "bourbon";
 @import "neat";
- 
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,600);
+
+$baseline: 12px;
 
 body{
   margin: 0;
-  min-height: 4000px;
+  min-height: $baseline*200;
 
 }
 
-section#cover{
-    h1{
-      text-align: center;
-      font-family: Raleway, "jaf-lapture-caption";
-      color: #333;
-      font-size: 10em;
-      line-height: 400px;
-      font-weight: 900;
-      background: transparent url(http://bigbackground.com/wp-content/uploads/2013/09/space-wallpaper-for-rooms.jpg) 300px 800px;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      overflow: hidden;
-    }
+.editable{
+  outline: none;
 }
 
-section#main {
-  img {
-    width: 48px;
+article{
+  header, section{
+    @include shift(2);
+    @include span-columns(8);
+    margin-top: $baseline*6;
   }
 
-  article {
-    header{
-      background: transparent url(http://bigbackground.com/wp-content/uploads/2013/09/space-wallpaper-for-rooms.jpg); 
-      background-size: 100%;
-      overflow: hidden;
+  #authors{
+    .first-author, .second-author{
+      @include span-columns(6);
 
-      h1{
-        margin-bottom: 140px;
-        margin-top: 470px;
-        text-shadow: 0 0 9px white;
-        font-size: 6em;
-        @include shift(2);
-        @include span-columns(8);      
+      img{
+        width: 128px;
+        height: 128px;
+        background: #eee;
       }
     }
+  }
 
-    #authors{
-      .first, .second{
-        @include span-columns(6);
-      }
-      .second{
-        background: white url(http://upload.wikimedia.org/wikipedia/commons/5/59/William_Lane_Craig.jpg);
-        background-size: 100%;
-        height: 1000px;
-      }
-    }
+  > p{
+    font-family: Georgia;
+    font-size: 18px;
+  }
 
-    h1, h2, p{
-    }
+  h1{
+    text-shadow: 0 0 9px white;
+    font-size: $baseline*5;
+    font-style: italic;
+    font-family: "jaf-lapture-caption";
+    line-height: $baseline*5;
+    color: black; 
+  }
+  h2{
+    font-size: $baseline*2;
+    line-height: $baseline*2;
+    font-family: "jaf-lapture-caption";
+    font-weight: 300;
+  }
 
-    h1{
-      font-family: "Helvetica Neue";
-      font-weight: 100;
-      line-height: 1em;
-      color: black; 
+  h1, h2, h3, h4{
+    margin: 0;
+    // the editor adds a p to the element
+    // so this is a workaround
+    p{
+      margin: 0;
     }
-    h2{
-      font-family: "jaf-lapture-caption";
-      font-size: 2em;
+  }
+  h3{
+    font-family: "jaf-lapture-caption";
+    font-size: 36px;
+    margin: 0;
+    + p{
+      margin-top: 0;
+    }
+  }
+
+  h4{
+    font-family: "jaf-lapture-caption";
+    font-size: 28px;
+    margin: 0;
+    + p{
+      margin-top: 0;
     }
   }
 }
