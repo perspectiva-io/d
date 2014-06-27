@@ -1,4 +1,5 @@
 section#cover
-  h1 principle
-  - for debate in @debates
-    = link_to debate.title, debate 
+  = link_to 'New debate', new_debate_path
+  ul
+    - for debate in @debates
+      li = link_to debate.title, edit_debate_path(debate)
