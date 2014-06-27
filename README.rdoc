@@ -1,28 +1,38 @@
-== README
+== What is it?
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Some UX tests only.
 
-Things you may want to cover:
+== Installing it
 
-* Ruby version
+Assuming you have {Ruby on Rails}[http://rubyonrails.org/download/] installed:
 
-* System dependencies
+=== Installing the application
 
-* Configuration
+* Clone the repository <tt>git clone git@github.com:disputatio/d.git</tt>
+* Step into the new directory <tt>cd d</tt>
+* Install Bundler[http://gembundler.com/] <tt>gem install bundler</tt>
+* Install dependencies <tt>bundler install</tt>
 
-* Database creation
+=== Installing Redis
 
-* Database initialization
+Maybe you will have to install Redis[http://redis.io] (version <b>2.6</b> or newer is required).
 
-* How to run the test suite
+==== Mac OS X
 
-* Services (job queues, cache servers, search engines, etc.)
+Installing it using Homebrew[http://brew.sh/] seems to work properly <tt>brew install redis</tt>
 
-* Deployment instructions
+==== Linux
 
-* ...
+If you use {Apt (Advanced Package Tool)}[https://wiki.debian.org/Apt] you might end up with an outdated version, so you might consider installing it from source:
 
+* Download it <tt>wget http://download.redis.io/releases/redis-2.8.12.tar.gz</tt>
+* Uncompress it <tt>tar xzf redis-2.8.12.tar.gz</tt>
+* Step into its folder <tt>cd redis-2.8.12</tt>
+* Run <tt>make</tt> and them <tt>make install</tt> to install it
+* Then you can trash these files <tt>rm -rf redis-2.8.12 redis-2.8.12.tar.gz</tt>.
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+== Running it
+
+* Start Redis <tt>redis-server</tt>
+* In a new Terminal window/tab, start the application <tt>rails s</tt>
+* Point your browser to the specified address, usually http://localhost:3000
