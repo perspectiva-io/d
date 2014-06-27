@@ -26,18 +26,20 @@ class ArticleEditor
 class UpdateField
   constructor: (@element) ->
 
-  field: ->
-    @element.data('field')
-
-  value: ->
-    if @element.is('.with-toolbar') then @element.find('p').html() else @element.html()
-
-  url: ->
-    $('article').data('update-url')
-
   save: ->
     $.post @url(), {_method: 'patch', field: @field(), value: @value()}, (response) ->
       console.log(response)
+
+  #private
+
+  field = ->
+    @element.data('field')
+
+  value = ->
+    if @element.is('.with-toolbar') then @element.find('p').html() else @element.html()
+
+  url = ->
+    $('article').data('update-url')
 
 $ ->
   new ArticleEditor
