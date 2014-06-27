@@ -1,0 +1,18 @@
+button.btn Publish
+article[data-update-url=debate_path(@debate)]
+  header
+    h1.no-toolbar.editable[data-field="title" data-placeholder="Big question here"] == @debate.title
+    h2.no-toolbar.editable[data-field="subtitle" data-placeholder="A qnice punchline here"] == @debate.subtitle
+  section#authors
+    .first-author
+      h3 Yes
+      = image_tag ""
+      h4.no-toolbar.editable[data-field="pro_author_name" data-placeholder="Pro author name"] == @debate.pro_author_name
+    .second-author
+      h3 No
+      = image_tag ""
+      h4.no-toolbar.editable[data-field="con_author_name" data-placeholder="Con author name"] == @debate.con_author_name
+  section#debate
+    p.editable.with-toolbar[data-field="pro_author_content" data-placeholder="The pro author content goes here"] == @debate.pro_author_content
+    p.editable.with-toolbar[data-field="con_author_content" data-placeholder="The con author content goes here"] == @debate.con_author_content
+
