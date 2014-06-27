@@ -14,5 +14,7 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
-
 /log
+
+# Ignore redis dataset backup
+dump.rdb
