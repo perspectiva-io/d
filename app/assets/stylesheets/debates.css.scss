@@ -30,11 +30,12 @@ img{
 h1, h2, h3, h4, h5, p, img{
   margin-bottom: $baseline;
   margin-top: 0;
+
+  //background: rgba(255,0,0,0.4);
 }
 
 
 article{
-  
   padding-top: $baseline * 8;
 
   header, section{
@@ -64,18 +65,24 @@ article{
     color: black;
     font-family: "jaf-lapture-caption";
     font-style: italic;
-    margin-bottom: 0;
-    padding: 0;
+    //margin-bottom: 0;
+    //padding: 0;
 
     &:focus{
     }
   }
 
   h2{
-    @include baseline(2, 2, 5px);
+
     color: #666;
     font-family: "jaf-lapture-caption";
     font-weight: 400;
+    @include baseline(2, 2, 5px);
+
+    &:after{
+      top: none !important;
+      left: none !important;
+    }
   }
 
   h3{

@@ -24,7 +24,7 @@ class DebatesController < ApplicationController
   end
 
   def show
-    @debate = Debate[params[:id]] or raise DebateNotFound
+    @debate = Debate[params[:id]] || raise DebateNotFound
   end
 
   def update
