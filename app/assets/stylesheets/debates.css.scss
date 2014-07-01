@@ -19,109 +19,111 @@ body{
   min-height: 2000px;
 }
 
-.editable{
-  outline: none;
-}
-
-img{
-  display: block;
-}
-
-h1, h2, h3, h4, h5, p, img{
-  margin-bottom: $baseline;
-  margin-top: 0;
-
-  //background: rgba(255,0,0,0.4);
-}
-
-
-article{
-  padding-top: $baseline * 8;
-
-  header, section{
-    @include shift(2);
-    @include span-columns(8);
+body.debates{
+  .editable{
+    outline: none;
   }
 
-  #authors{
-    .first-author, .second-author{
-      @include span-columns(6);
+  img{
+    display: block;
+  }
 
-      img{
-        width: $baseline * 10;
-        height: $baseline * 10;
-        background: #eee;
+  h1, h2, h3, h4, h5, p, img{
+    margin-bottom: $baseline;
+    margin-top: 0;
+
+    //background: rgba(255,0,0,0.4);
+  }
+
+
+  article{
+    padding-top: $baseline * 8;
+
+    header, section{
+      @include shift(2);
+      @include span-columns(8);
+    }
+
+    #authors{
+      .first-author, .second-author{
+        @include span-columns(6);
+
+        img{
+          width: $baseline * 10;
+          height: $baseline * 10;
+          background: #eee;
+        }
       }
     }
-  }
 
-  > p{
-    font-family: Georgia;
-    font-size: 18px;
-  }
-
-  h1{
-    @include baseline(4, 4, 10px);
-    color: black;
-    font-family: "jaf-lapture-caption";
-    font-style: italic;
-    //margin-bottom: 0;
-    //padding: 0;
-
-    &:focus{
+    > p{
+      font-family: Georgia;
+      font-size: 18px;
     }
-  }
 
-  h2{
+    h1{
+      @include baseline(4, 4, 10px);
+      color: black;
+      font-family: "jaf-lapture-caption";
+      font-style: italic;
+      //margin-bottom: 0;
+      //padding: 0;
 
-    color: #666;
-    font-family: "jaf-lapture-caption";
-    font-weight: 400;
-    @include baseline(2, 2, 5px);
-
-    &:after{
-      top: none !important;
-      left: none !important;
+      &:focus{
+      }
     }
-  }
 
-  h3{
-    @include baseline(3, 3, 8px);
-  }
+    h2{
 
-  h4{
-    @include baseline(2, 2, 5px);
-    font-weight: 200;
-  }
+      color: #666;
+      font-family: "jaf-lapture-caption";
+      font-weight: 400;
+      @include baseline(2, 2, 5px);
 
-  #debate p{
-    @include baseline(4/3.0, 2, 6px);
-    font-family: Georgia;
-  }
-
-  h1, h2, h3, h4{
-    // the editor adds a p to the element
-    // so this is a workaround
-    p{
-      margin: 0;
+      &:after{
+        top: none !important;
+        left: none !important;
+      }
     }
-  }
 
-  h3{
-    font-family: "jaf-lapture-caption";
-    font-size: 36px;
-
-    + p{
-      margin-top: 0;
+    h3{
+      @include baseline(3, 3, 8px);
     }
-  }
 
-  h4{
-    font-family: "jaf-lapture-caption";
-    font-size: 28px;
+    h4{
+      @include baseline(2, 2, 5px);
+      font-weight: 200;
+    }
 
-    + p{
-      margin-top: 0;
+    #debate p{
+      @include baseline(4/3.0, 2, 6px);
+      font-family: Georgia;
+    }
+
+    h1, h2, h3, h4{
+      // the editor adds a p to the element
+      // so this is a workaround
+      p{
+        margin: 0;
+      }
+    }
+
+    h3{
+      font-family: "jaf-lapture-caption";
+      font-size: 36px;
+
+      + p{
+        margin-top: 0;
+      }
+    }
+
+    h4{
+      font-family: "jaf-lapture-caption";
+      font-size: 28px;
+
+      + p{
+        margin-top: 0;
+      }
     }
   }
 }
