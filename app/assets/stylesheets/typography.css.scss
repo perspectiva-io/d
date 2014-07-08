@@ -1,0 +1,256 @@
+@import "bourbon";
+@import "neat";
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300italic,400italic,700,700italic,900,900italic,300);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700);
+
+
+body.typography{
+
+  h5{
+    text-transform: uppercase;
+    font-family: 'Helvetica Neue', arial;
+    letter-spacing: 2px;
+    font-size: 13px;
+    color: #666;
+    font-weight: 100;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+
+body.typography.titles{
+
+  section{
+    @include shift(1);
+    @include span-columns(9);
+  }
+  
+  .font{
+
+    margin-top: 100px;
+    margin-bottom: 200px;
+
+    h1, h2, h3, h4{
+      line-height: 1em;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      color: rgba(0, 0, 0, 0.8);
+      //font-style: italic;
+    }
+
+    $size: 24px;
+    h4{
+      font-size: $size;
+    }
+    h3{
+      font-size: $size * 2;
+    }
+    h2{
+      font-size: $size * 4;
+    }
+    h1{
+      font-size: $size * 6;
+      margin-top: 0;
+    }
+  }
+
+  .leitura{
+    h1, h2, h3, h4{
+      font-family: 'leitura-news-n4', 'leitura-news';
+//leitura-news
+//Constantia
+//Lucida Bright
+
+      
+      font-weight: 900;
+    }
+  }
+  .adelle{
+    h1{
+      letter-spacing: -2px;
+    }
+    h1, h2, h3, h4{
+      font-family: 'Adelle';
+      font-weight: 900;
+    }
+  }
+
+  .jaflapture{
+    h1, h2, h3, h4{
+      font-family: "jaf-lapture-caption";
+      font-weight: 900;
+    }
+
+    h1{
+      letter-spacing: -6px;
+    }
+
+    h2{
+      letter-spacing: -4px;
+    }
+
+    h3{
+      letter-spacing: -2px;
+    }
+  }
+
+  .vollkorn{
+    h1, h2, h3, h4{
+      font-family: "Vollkorn";
+      font-weight: 900;
+    }
+
+    h1{
+      letter-spacing: -5px;
+    }
+
+    h2{
+      letter-spacing: -3px;
+    }
+
+    h3{
+      letter-spacing: -1px;
+    }
+    
+  }
+}
+
+
+body.typography.paragraphs{
+
+  section{
+    @include shift(2.5);
+    @include span-columns(7);
+  }
+  
+  .font{
+
+    margin-top: 100px;
+    margin-bottom: 200px;
+
+    blockquote, p, h2{
+      color: rgba(0, 0, 0, 0.8);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    blockquote{
+      margin: 50px -140px;
+      font-style: italic;
+      font-size: 30px;
+      line-height: 44px;
+      text-align: center;
+      font-weight: 100;
+      letter-spacing: 0.1px;
+    }
+
+    h2{
+      font-size: 42px;
+      margin-bottom: 0;
+      margin-top: 80px;
+      font-weight: 900;
+    }
+
+    p{
+      margin-top: 0;
+      font-size: 20px;
+      font-weight: 100;
+      line-height: 1.7em;
+      word-spacing: 3px;
+    }
+  }
+
+  .merriweather{
+    blockquote, p, h2{
+      font-family: 'Merriweather';
+    }
+  }
+
+  .georgia{
+    blockquote, p, h2{
+      font-family: 'Georgia';
+    }
+
+    p{
+      color: rgba(0, 0, 0, 0.75);
+      font-size: 22px;
+      word-spacing: 1px;
+    }
+  }
+
+  .adelle{
+    blockquote, p, h2{
+      font-family: 'Adelle';
+    }
+
+    h2{
+      //font-weight: 1500;
+      //font-size: 120px;
+      //line-height: 120px;
+    }
+    p{
+      color: rgba(0, 0, 0, 0.75);
+      font-size: 22px;
+      word-spacing: 1px;
+    }
+  }
+
+  
+  
+
+  .jaflapture{
+    blockquote, p, h2{
+      font-family: "jaf-lapture-caption";
+    }
+
+    p{
+      color: rgba(0, 0, 0, 0.75);
+      font-size: 22px;
+      word-spacing: 1px;
+    }
+  }
+
+  .leitura{
+    blockquote, p, h2{
+      font-family: 'leitura-news-n4', 'leitura-news';
+    }
+
+    p{
+      font-size: 22px;
+      word-spacing: 0px;
+      letter-spacing: 0;
+    }
+  }
+
+  .kepler{
+    blockquote, p, h2{
+      font-family: "kepler-std-n4","kepler-std"; 
+    }
+
+    p{
+      font-size: 24px;
+      word-spacing: 0px;
+      letter-spacing: 0;
+    }
+  }
+
+  .vollkorn{
+    blockquote, p, h2{
+      font-family: "Vollkorn";
+    }
+
+    blockquote{
+      letter-spacing: 0;
+    }
+
+    p{
+      color: rgba(0, 0, 0, 0.75);
+      font-size: 22px;
+      word-spacing: 0px;
+      letter-spacing: 0;
+      
+    }
+  }
+  
+
+}

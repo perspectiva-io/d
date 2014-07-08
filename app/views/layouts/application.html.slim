@@ -5,13 +5,15 @@ html
   head
     title D
     = stylesheet_link_tag 'application', media: 'all'
-    //= stylesheet_link_tag 'http://basehold.it/12'
+    /= stylesheet_link_tag 'http://basehold.it/12'
 
     = javascript_include_tag 'application' 
     = javascript_include_tag '//use.typekit.net/paj4pbm.js'
+    = javascript_include_tag '//use.typekit.net/krz8fxx.js'
+    = javascript_include_tag '//use.typekit.net/yfn4ote.js'
     javascript:
-      try{ Typekit.load(); }catch(e){ console.log('Tipekit failed') }
+      try{ Typekit.load(); }catch(e){ alert('Tipekit failed') }
     = csrf_meta_tags
 
-  body
+  body[class=[controller_name, action_name]]
     = yield

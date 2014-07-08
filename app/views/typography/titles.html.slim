@@ -1,0 +1,17 @@
+- fonts = %w[leitura adelle jaflapture vollkorn]
+section
+  article
+    ul
+      - for font in fonts 
+        li = link_to font, "##{font}"
+
+section
+  article
+    - for font in fonts 
+      div[class=[font, 'font'] id=font]
+        h5 == font
+
+        h1 Does God exist? 
+        h2 Does God exist? 
+        h3 Does God exist? 
+        h4 Does God exist? 

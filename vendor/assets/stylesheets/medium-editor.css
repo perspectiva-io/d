@@ -162,7 +162,7 @@
   position: relative; }
   .medium-editor-placeholder:after {
     position: absolute;
-    top: 0;
-    left: 0;
+    /*top: 0;
+    left: 0;*/
     content: attr(data-placeholder);
     font-style: italic; }

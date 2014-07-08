@@ -12,5 +12,5 @@ class Debate < Ohm::Model
   attribute :con_author_image
   attribute :con_author_content
 
-  alias :to_s :id
+  alias_method :to_s, :id
 end
