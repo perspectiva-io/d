@@ -36,6 +36,7 @@ body.typography.titles{
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
       color: rgba(0, 0, 0, 0.8);
+      //font-style: italic;
     }
 
     $size: 24px;
@@ -54,6 +55,17 @@ body.typography.titles{
     }
   }
 
+  .leitura{
+    h1, h2, h3, h4{
+      font-family: 'leitura-news-n4', 'leitura-news';
+//leitura-news
+//Constantia
+//Lucida Bright
+
+      
+      font-weight: 900;
+    }
+  }
   .adelle{
     h1{
       letter-spacing: -2px;
@@ -195,6 +207,30 @@ body.typography.paragraphs{
       color: rgba(0, 0, 0, 0.75);
       font-size: 22px;
       word-spacing: 1px;
+    }
+  }
+
+  .leitura{
+    blockquote, p, h2{
+      font-family: 'leitura-news-n4', 'leitura-news';
+    }
+
+    p{
+      font-size: 22px;
+      word-spacing: 0px;
+      letter-spacing: 0;
+    }
+  }
+
+  .kepler{
+    blockquote, p, h2{
+      font-family: "kepler-std-n4","kepler-std"; 
+    }
+
+    p{
+      font-size: 24px;
+      word-spacing: 0px;
+      letter-spacing: 0;
     }
   }
 
