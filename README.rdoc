@@ -29,7 +29,7 @@ If you use {Apt (Advanced Package Tool)}[https://wiki.debian.org/Apt] you might 
 * Uncompress it <tt>tar xzf redis-2.8.12.tar.gz</tt>
 * Step into its folder <tt>cd redis-2.8.12</tt>
 * Run <tt>make</tt> and them <tt>make install</tt> to install it
-* Then you can trash these files <tt>rm -rf redis-2.8.12 redis-2.8.12.tar.gz</tt>.
+* Then you can trash these files <tt>cd ..</tt> and <tt>rm -rf redis-2.8.12 redis-2.8.12.tar.gz</tt>
 
 == Running it
 
