@@ -8,7 +8,7 @@ Assuming you have {Ruby on Rails}[http://rubyonrails.org/download/] installed:
 
 === Installing the application
 
-* Clone the repository <tt>git clone git@github.com:disputatio/d.git</tt>
+* Clone the repository <tt>git clone git@github.com:perspectiva-io/d.git</tt>
 * Step into the new directory <tt>cd d</tt>
 * Install Bundler[http://gembundler.com/] <tt>gem install bundler</tt>
 * Install dependencies <tt>bundler install</tt>
